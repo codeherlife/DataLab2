@@ -43,6 +43,7 @@ double averageSalary (Employee workers[], int workerCounter);
 void womenGetLess (Employee workers[], int workerCounter, double averageSalaries);
 void ratioMen (Employee workers[], int workerCounter, double averageSalaries);
 void outputVariousInfo (Employee workers[], int workerCounter);
+void gettingRaise (Employee workers[], int workerCounter);
 
 int main(void) {
     Employee workers[SIZE];
@@ -70,6 +71,7 @@ int main(void) {
     womenGetLess(workers, workerCounter, averageSalaries);
     ratioMen(workers, workerCounter, averageSalaries);
     outputVariousInfo(workers, workerCounter);
+    gettingRaise (workers, workerCounter);
     
     fclose(fpIn);
     fclose(fp);
@@ -292,6 +294,25 @@ void outputVariousInfo (Employee workers[], int workerCounter){
     }
 }
 
-//(J) Give a 10% raise to all employees who make less than $350.00 per week an output the first and last name and new salary for each of the employees who received the raise.
+
+
+//(J) Give a 10% raise to all employees who make less than $350.00 per week and output the first and last name and new salary for each of the employees who received the raise:
+
+void gettingRaise (Employee workers[], int workerCounter){
+    int i;
+    double raiseAmount; 
+    double newRaisedSalaryAmount;
+ 
+    printf(     "\n\n All employees who made less than $350 per week received a raise of 10 percent. Below are their names and their new salary amounts:\n");
+    fprintf(fp, "\n\n All employees who made less than $350 per week received a raise of 10 percent. Below are their names and their new salary amounts:\n");
+    for(i = 0; i < workerCounter; i++){
+        if(workers[i].salary < 350.00){
+            raiseAmount = workers[i].salary * .10;
+            newRaisedSalaryAmount = raiseAmount + workers[i].salary;
+            printf(     "%s %s %.2f\n", workers[i].first, workers[i].last, newRaisedSalaryAmount);
+            fprintf(fp, "%s %s %.2f\n", workers[i].first, workers[i].last, newRaisedSalaryAmount);
+        }
+    }
+}
 
 
