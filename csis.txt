@@ -1,0 +1,53 @@
+
+ADA     A AGUSTA    33 BABBAGE ROAD  LOVELACE    GB 19569 28 F 2 350.50
+ISSAC   A ASIMOV    99 FICTION WAY   AMHERST     MA 63948 58 M 6 423.88
+HUMPHRY R BOGART    71 SAM STREET    HOLLYWOOD   CA 48482 56 M 5 366.00
+ALBERT  G EINSTEIN  94 ENERGY WAY    PRINCETON   NJ 47474 67 M 8 780.00
+EMMYLOU L HARRIS    66 COUNTRY ROAD  NASHVILLE   TN 72647 38 F 2 767.42
+JAMES   T KIRK      11 SPACE STREET  VULCAN      CA 82828 46 M 1 235.70
+TED     L KOPPEL    55 ABC PLACE     WASHINGTON  DC 37376 48 M 9 909.44
+DAVID   T LETTERMAN 14 WNBC AVENUE   NEW YORK    NY 19338 47 M 5 445.65
+STEVIE  R NICKS     31 MUSIC ROAD    CHICAGO     IL 23459 38 F 8 460.88
+MONTY   P PYTHON    76 SILLY STREET  LONDON      GB 80939 44 M 2 320.50
+ROGER   R RABBIT    15 LOONEY TOONS  HOLLYWOOD   CA 91343 24 M 4 259.53
+SALLY   W RIDE      21 COLUMBIA WAY  HOUSTON     TX 91123 30 F 9 707.80
+ROD     Q SERLING   11 TWLIGHT ZONE  SAN DIEGO   CA 93939 56 M 1 440.00
+LUKE    R SKYWALKER 43 MILKY WAY     NEW YORK    NY 12343 35 M 5 660.00
+
+All men on the payroll:
+ISSAC   ASIMOV   HUMPHRY BOGART   ALBERT  EINSTEIN JAMES   KIRK     TED     KOPPEL   DAVID   LETTERMANMONTY   PYTHON   ROGER   RABBIT   ROD     SERLING  LUKE    SKYWALKER
+
+ Highest paid woman on the payroll:
+EMMYLOU HARRIS   
+
+
+ Lowest paid man on the payroll:
+JAMES   KIRK     
+
+
+ Average salary for all employees:
+509.09 
+
+
+ All women earning less than the average salary:
+ADA     AGUSTA   
+STEVIE  NICKS    
+
+
+ The ratio of men earning above the average salary:
+0.300
+
+
+ The ratio of men earning below the average salary:
+0.700
+
+
+ The name(s) of all employees who make more than 35k, have been with the company for at least 5 years, and who are over 30 years old:
+ALBERT  EINSTEIN 
+TED     KOPPEL   
+
+
+ All employees who made less than $350 per week received a raise of 10 percent. Below are their names and their new salary amounts:
+JAMES   KIRK      259.27
+MONTY   PYTHON    352.55
+ROGER   RABBIT    285.48

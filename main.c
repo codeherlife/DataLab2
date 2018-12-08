@@ -159,7 +159,7 @@ void outputMen (Employee workers[], int workerCounter){
     for(i = 0; i < workerCounter; i++){
         if(workers[i].sex[0] == 'M'){
             printf(     "%s %s\n", workers[i].first, workers[i].last);
-            fprintf(fp, "%s %s", workers[i].first, workers[i].last);
+            fprintf(fp, "%s %s\n", workers[i].first, workers[i].last);
         }
     }
 }
@@ -315,6 +315,6 @@ void gettingRaise (Employee workers[], int workerCounter){
     }
 }
 
-//(K) Sort the structures according to zip codes and output the first and last name and zip code for each of the employees:
+
 
 
