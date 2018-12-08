@@ -9,6 +9,7 @@
 //  Name and version of the C Compiler: Xcode v. 10.1 (10B61);
 //  Name of Operating System: Mac OS High Sierra v. 10.13.6;
 
+//DON"T FORGET TO CHANGE ACCESS FULL PATH NAME TO SOMETHING THAT WILL WORK FOR PROF
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -52,6 +53,8 @@ int main(void) {
     
     fp = fopen("csis.txt", "w");
     
+    
+    //DON"T FORGET TO CHANGE THIS BEFORE SUBMITTING
     if(!(fpIn = fopen("/Users/codeherlife/Desktop/CSCI 112/DatabaseLab2/DatabaseLab2/DatabaseLab2/payfile.txt", "r"))) {
         printf(     "payfile.txt could not be opened for input.");
         fprintf(fp, "payfile.txt could not be opened for input.");
@@ -65,9 +68,7 @@ int main(void) {
     outputMen(workers, workerCounter);
     outputBallerLady(workers, workerCounter);
     outputPoorGuy(workers, workerCounter);
-    averageSalary(workers, workerCounter);
     averageSalaries = averageSalary(workers, workerCounter);
-    
     womenGetLess(workers, workerCounter, averageSalaries);
     ratioMen(workers, workerCounter, averageSalaries);
     outputVariousInfo(workers, workerCounter);
@@ -125,8 +126,8 @@ int inputData(Employee workers[]) {
 void outputContents (Employee workers[], int workerCounter){
     int i;
     for(i = 0; i < workerCounter; i++){
-        printf(     "%s", workers[i].first);
-        fprintf(fp, "%s", workers[i].first);
+        printf(     "\n%s", workers[i].first);
+        fprintf(fp, "\n%s", workers[i].first);
         printf(     " %s", workers[i].initial);
         fprintf(fp, " %s", workers[i].initial);
         printf(     " %s", workers[i].last);
@@ -145,8 +146,8 @@ void outputContents (Employee workers[], int workerCounter){
         fprintf(fp, " %s", workers[i].sex);
         printf(     " %d", workers[i].tenure);
         fprintf(fp, " %d", workers[i].tenure);
-        printf(     " %f", workers[i].salary);
-        fprintf(fp, " %f", workers[i].salary);
+        printf(     " %.2f", workers[i].salary);
+        fprintf(fp, " %.2f", workers[i].salary);
     }
 }
 
@@ -180,6 +181,7 @@ void outputBallerLady (Employee workers[], int workerCounter){
     }
 }
     printf(     "%s %s\n", workers[indexOfHighestWage].first, workers[indexOfHighestWage].last);
+    fprintf(fp, "%s %s\n", workers[indexOfHighestWage].first, workers[indexOfHighestWage].last);
 
 }
 //(E)in this function- output the first and last name of the lowest paid man on the payroll should be James Kirk
@@ -198,7 +200,7 @@ void outputPoorGuy (Employee workers[], int workerCounter){
         }
     }
     printf(     "%s %s\n", workers[indexOfLowestWage].first, workers[indexOfLowestWage].last);
-    //fprintf
+    fprintf(fp, "%s %s\n", workers[indexOfLowestWage].first, workers[indexOfLowestWage].last);
 }
 
 //(F) in this function- output the average salary for all employees
@@ -208,7 +210,7 @@ double averageSalary (Employee workers[], int workerCounter){
     int i;
     
     printf(     "\n\n Average salary for all employees:\n");
-    //fprintf(
+    fprintf(fp, "\n\n Average salary for all employees:\n");
     
     for(i = 0; i < workerCounter; i++){
         allSalarysTotal += workers[i].salary;
@@ -216,8 +218,8 @@ double averageSalary (Employee workers[], int workerCounter){
     }
     averageSalarys = allSalarysTotal / workerCounter;
     
-    printf(     "%f \n", averageSalarys);
-    //fprintf(
+    printf(     "%.2f \n", averageSalarys);
+    fprintf(fp, "%.2f \n", averageSalarys);
     return averageSalarys;
 }
 
@@ -258,8 +260,8 @@ void ratioMen (Employee workers[], int workerCounter, double averageSalaries){
     }
     ratioMenEarningMore = (double) numMenEarningMore / numMenTotal;
     
-    printf(     "%d %d %.3f\n", numMenTotal, numMenEarningMore, ratioMenEarningMore);
-    fprintf(fp, "%d %d %.3f\n", numMenTotal, numMenEarningMore, ratioMenEarningMore);
+    printf(     "%.3f\n",ratioMenEarningMore);
+    fprintf(fp, "%.3f\n",ratioMenEarningMore);
     
     printf(     "\n\n The ratio of men earning below the average salary:\n");
     fprintf(fp, "\n\n The ratio of men earning below the average salary:\n");
@@ -271,8 +273,8 @@ void ratioMen (Employee workers[], int workerCounter, double averageSalaries){
     }
     ratioMenEarningLess = (double) numMenEarningLess / numMenTotal;
     
-    printf(     "%d %d %.3f\n", numMenTotal, numMenEarningLess, ratioMenEarningLess);
-    fprintf(fp, "%d %d %.3f\n", numMenTotal, numMenEarningLess, ratioMenEarningLess);
+    printf(     "%.3f\n", ratioMenEarningLess);
+    fprintf(fp, "%.3f\n", ratioMenEarningLess);
     
 }
 
@@ -294,13 +296,11 @@ void outputVariousInfo (Employee workers[], int workerCounter){
     }
 }
 
-
-
 //(J) Give a 10% raise to all employees who make less than $350.00 per week and output the first and last name and new salary for each of the employees who received the raise:
 
 void gettingRaise (Employee workers[], int workerCounter){
     int i;
-    double raiseAmount; 
+    double raiseAmount;
     double newRaisedSalaryAmount;
  
     printf(     "\n\n All employees who made less than $350 per week received a raise of 10 percent. Below are their names and their new salary amounts:\n");
@@ -314,5 +314,7 @@ void gettingRaise (Employee workers[], int workerCounter){
         }
     }
 }
+
+//(K) Sort the structures according to zip codes and output the first and last name and zip code for each of the employees:
 
 
